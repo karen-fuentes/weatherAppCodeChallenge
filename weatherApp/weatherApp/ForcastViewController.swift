@@ -65,8 +65,8 @@ class ForcastViewController: UIViewController, UITableViewDataSource, UITableVie
         let components = calendar.dateComponents([ .month,.day], from: date)
         let finalDate = calendar.date(from:components)
         
-        cell.maxTemp?.text = String(weeklyWeather[indexPath.row].maxTempC)
-        cell.minTemp?.text = String(weeklyWeather[indexPath.row].minTempC)
+        cell.maxTemp?.text = "Max: " + String(weeklyWeather[indexPath.row].maxTempC) + "°C"
+        cell.minTemp?.text = "Min: " + String(weeklyWeather[indexPath.row].minTempC) + "°C"
         cell.date.text = String(describing: finalDate!)
         cell.weatherIcon.image = UIImage(named: weeklyWeather[indexPath.row].icon)
         return cell
